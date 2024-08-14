@@ -6,6 +6,7 @@ public class Main extends JFrame {
     class Canvas extends JPanel {
 
         Grid grid;
+        Trail trail;
 
         public Canvas() {
             setPreferredSize(new Dimension(720,720));
@@ -15,6 +16,7 @@ public class Main extends JFrame {
         @Override
         public void paint(Graphics g) {
             grid.paint(g, getMousePosition());
+          //  trail.drawMouseTrails(g, 21, 32);
         }
 
     }
