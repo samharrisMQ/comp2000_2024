@@ -5,18 +5,22 @@ public class Main extends JFrame {
 
     class Canvas extends JPanel {
 
+        
         Grid grid;
         Trail trail;
+        
 
         public Canvas() {
             setPreferredSize(new Dimension(720,720));
             grid = new Grid();
+            trail = new Trail(100);
+            this.addMouseMotionListener(trail);
         }
 
         @Override
         public void paint(Graphics g) {
             grid.paint(g, getMousePosition());
-          //  trail.drawMouseTrails(g, 21, 32);
+            trail.drawMouseTrails(g, 21);
         }
 
     }

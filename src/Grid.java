@@ -5,6 +5,7 @@ public class Grid {
     //fields
     Cell[][] cells = new Cell[20][20];
 
+
     //constructors
     public Grid() {
         for(int i=0; i<cells.length; i++) {
